@@ -45,7 +45,9 @@ INFO:spainn.asetools.generate_db:Wrote 101 geometries to ./sample_data/iso_buten
 
 Bash:
 
->>> spainn-db generate ./sample_data/ ./sample_data/iso_butene.db
+.. code-block:: console
+
+   (venv)$ spainn-db generate ./sample_data/ ./sample_data/iso_butene.db
 
 
 Conversion of an existing databse, e.g., SchNarc database, into a **SpaiNN** database can be performed using the following code snippet.
