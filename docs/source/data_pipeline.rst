@@ -5,7 +5,7 @@ Data pipeline
 
 The data pipeline of **SpaiNN** mainly consists of :py:class:`DatabaseUtils` and involves the creation of a database using the :py:class:`GenerateDB` class or the conversion of existing databases (*e.g.*, SchNarc database) using the :py:class:`ConvertDB` class. 
 
-When generating a database, the following properties are parsed from SHARC output, *i.e.*, ``Qm.in`` and ``Qm.out`` files: energies (:math:`E_{i}`), forces (:math:`\mathbf{F}_{i}`), non-adiabatic coupling (:math:`\mathbf{NAC}_{ij}`), Dipoles (:math:`\mu_{i}`), and spin-orbit couplings (:math:`\mathbf{SOC}_{ij}`).
+When generating a database, the following properties are parsed from SHARC output, *i.e.*, ``Qm.in`` and ``Qm.out`` files: energies (:math:`\mathsf{E_{i}}`), forces (:math:`\mathsf{\mathbf{F}_{i}}`), non-adiabatic coupling (:math:`\mathsf{\mathbf{NAC}_{ij}}`), Dipoles (:math:`\mathsf{\mu_{i}}`), and spin-orbit couplings (:math:`\mathsf{\mathbf{SOC}_{ij}}`).
 These properties obtain valuable information about the molecules, which are employed in non-adiabatic molecular dynamics simulations using SHARC (see :ref:`main`).
 The respective properties are stored in form of an Atomic Simulation Environment (ASE) databse.
 
