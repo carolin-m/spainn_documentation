@@ -47,12 +47,20 @@ The following code snippet demonstrates how to add this information during the d
 
 >>> import spainn
 >>> from spainn.asetools import ConvertDB
->>> oldDB = os.path.join(os.getcwd(), 'sample_data', 'schnarc_butene.db')
->>> newDB = os.path.join(os.getcwd(), 'sample_data', 'butene_conv.db')
+>>> oldDB = os.path.join(os.getcwd(), 'sample_DB', 'schnarc_trans_butene.db')
+>>> newDB = os.path.join(os.getcwd(), 'sample_DB', 'trans_butene.db')
+>>> metadata = {
+     '_distance_unit': 'Bohr', 
+     '_property_unit_dict': {'energy': 'Hartree', 'forces': 'Hartree/Bohr', 'nacs': '1', 'smooth_nacs': '1'},
+     'n_singlets': 3, 'n_doublets': 0, 'n_triplets': 0, 
+     'phasecorrected': False, 'states': 'S S S'
+     }
 >>> convDB = ConvertDB()
->>> convDB.convert(olddb=oldDB, newdb=newDB, copy_metadata=True, smooth_nacs=True)
+>>> convDB.convert(olddb=oldDB, newdb=newDB, copy_metadata=False, smooth_nacs=True)
+>>> db_new = connect(newDB)
+>>> db_new.metadata = metadata
 >>>
-xx
-xx
-
+INFO:spainn.asetools.convert_db:Converting ./sample_DB/schnarc_trans_butene.db into ./sample_DB/trans_butene.db
+INFO:spainn.asetools.convert_db: ./sample_DB/schnarc_trans_butene.db has 101 entries
+INFO:spainn.asetools.convert_db: ./sample_DB/schnarc_trans_butene.db keys: energy has_forces forces dipoles nacs
 
