@@ -28,7 +28,9 @@ The default values are summarized in the following dictionary.
 
 Moreover, during the generation of a databse, the total number of electronic states as well as the number of singlet, doublet and triplet states are stored in form of metadata to the **SpaiNN** database.
 
-The following code snippet shows how to generate a database (``iso_butene.db``) from SHARC output stored in the folder ``sample_data``.
+The following code snippet shows how to generate a database (``iso_butene.db``) from SHARC output stored in the folder ``sample_data`` using python or command line API:
+
+Python:
 
 >>> import spainn
 >>> from spainn.asetools import GenerateDB
@@ -40,6 +42,11 @@ The following code snippet shows how to generate a database (``iso_butene.db``) 
 INFO:spainn.asetools.generate_db:Found following state list: ['3']
 INFO:spainn.asetools.generate_db:Found following properties: energy forces dipoles nacs
 INFO:spainn.asetools.generate_db:Wrote 101 geometries to ./sample_data/iso_butene.db
+
+Bash:
+
+>>> spainn-db generate ./sample_data/ ./sample_data/iso_butene.db
+
 
 Conversion of an existing databse, e.g., SchNarc database, into a **SpaiNN** database can be performed using the following code snippet.
 Noteworthy, in subsequent steps of the data pipeline expect a dictionary of units (properties and atomic coordinates) and states (number of singlet, doublet, and triplet states).
