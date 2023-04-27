@@ -1,4 +1,4 @@
-.. atomistic_modules
+.. _atomistic_modules:
 
 Atomistic Modules
 ----------------
