@@ -1,0 +1,50 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+	"setuptools_scm>=6.2"]
+
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+write_to = "_version.py"
+
+[project]
+name = "SpaiNN"
+authors = [
+  {name = "Sascha Mausenberger"},
+  {name = "Carolin Müller"},
+  {name = "Julia Westermayr"},
+  {name = "Philipp Marquetand", email = "philipp.marquetand@univie.ac.at"}
+  ]
+description = "A comprehensive package providing a flexible and efficient interface between [SchNetPack](https://github.com/atomistic-machine-learning/schnetpack/tree/master) 
+(development and application of neural network potentials) and [SHARC](https://www.sharc-md.org/) (surface hopping method for non-adiabatic molecular dynamics simulations)."
+readme = "README.rst"
+requires-python = ">=3.8"
+dynamic= ["version"]
+
+classifiers =[
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+    "Development Status :: 5 - Production/Stable",
+    "Natural Language :: English",
+    "Topic :: Scientific/Engineering :: Chemistry",
+    "Topic :: Scientific/Engineering :: Machine Learning",
+    "Topic :: Scientific/Engineering :: Excited States"
+    ]
+dependencies =[
+	"numpy>=1.19",
+	"schnetpack>=2.0",
+	"pathlib",
+	"urllib3"]
+
+[project.urls]
+"Bug Tracker"="https://github.com/ExcitedStateML/SPaiNN/issues/"
+"Repository"="https://github.com/ExcitedStateML/SPaiNN/"
+"Homepage"="https://github.com/ExcitedStateML/"
+"Documentation"="https://test-doc-cm.readthedocs.io/en/latest/"
+
+[tool.setuptools]
+package-dir = {""="src"}
+packages = ["SpaiNN"]
